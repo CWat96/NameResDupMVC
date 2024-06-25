@@ -1,0 +1,32 @@
+﻿@{
+    ViewData["Title"] = "Name Reservation";
+}
+
+@model NameReservation
+
+<h1>Name Reservation</h1>
+
+<form method="post">
+    <div class="form-group">
+        <label for="Name">Entity Name:</label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label for="ReservationType">Reservation Type (Optional):</label>
+        <select asp-for="ReservationType" class="form-control">
+            <option value="">Select...</option>
+            <option value="">CORPORATION</option>
+            <option value="">LIMITED PARTNERSHIP (LP)</option>
+            <option value="">LIMITED LIABILITY PARTNERSHIP (LLP)</option>
+            <option value="">LIMITED LIABILITY COMPANY (LLC)</option>
+            <option value="">GENERAL PARTNERSHIP (GP)</option>
+            <option value="">STATUTORY TRUST</option>
+            <option value="">LLC REGISTERED SERIES</option>
+            <option value="">LP REGISTERED SERIES</option>
+        </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
